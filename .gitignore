@@ -1,0 +1,4 @@
+# Project exclude paths
+/ConfigurationWithJavaCode/target/
+/SpringAnnotation/target/
+/target/

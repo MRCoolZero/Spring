@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
+    <bean id="musicBean"
+        class="ru.rickSanchez.lesson_d.ClassicalMusic"
+        init-method="doMyInit"
+        destroy-method="doMyDestroy"
+        factory-method="getClassicalMusic">
+    </bean>
+<!--    <bean id="musicClassicalMusic"-->
+<!--        class="ru.rickSanchez.lesson_d.ClassicalMusic">-->
+<!--    </bean>-->
+<!--    <bean id="musicRapMusic"-->
+<!--        class="ru.rickSanchez.lesson_d.RapMusic">-->
+<!--    </bean>-->
+<!--    <bean id="musicRockMusic"-->
+<!--        class="ru.rickSanchez.lesson_d.RockMusic">-->
+<!--    </bean>-->
+
+<!--    <bean id="musicPlayer"-->
+<!--        class="ru.rickSanchez.lesson_d.MusicPlayer">-->
+<!--        <property name="musicList">-->
+<!--            <list>-->
+<!--                <ref bean="musicClassicalMusic"/>-->
+<!--                <ref bean="musicRapMusic"/>-->
+<!--                <ref bean="musicRockMusic"/>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="name" value="${musicPlayer.name}"/>-->
+<!--        <property name="volume" value="${musicPlayer.volume}"/>-->
+<!--    </bean>-->
+
+
+</beans>
